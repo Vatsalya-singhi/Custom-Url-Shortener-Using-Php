@@ -11,5 +11,15 @@ The repository contains the following files:
  
  
  # Usuage
- Download the files and places it in xampp/htdocs directory under the "shorturl" folder. Grant "777" permission to .htaccess file.
+ Download the files and places it in xampp/htdocs directory under the "shorturl" folder . Grant "777" permission to .htaccess file.
  Open dbconfig.php and set the username,password,tablename and port number values. Open index.php and make changes to $newurl variable which holds the value of the shortened custom generated url.Run Xampp and sending GET request will print a json array with the new url. Your custom url is generated !
+ 
+ # Example of the GET request:
+ localhost:[PORT NUMBER]/shorturl/index.php?longUrl=[ACTUAL URL]&shortName=[CUSTOM NAME]
+ 
+ # Sample Outputs
+  
+  {"result":"success","longUrl":"https://xyz.in/abc/event.php?id=-s9j9j","shorturl":"xyz.in/shorturl/Mabe"}
+  
+  {"result":"failure","message":"similar url or code exist in db"}
+  
